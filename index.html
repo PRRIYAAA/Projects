@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <title>Anagram Checker</title> 
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script> 
+    </head> 
+
+    <body> 
+        <form onsubmit=disableInputs(event)>
+            <h1>LETS PLAY!!✨</h1>
+            <div class="container">
+                <h1>Anagram Checker</h1> 
+                <input type="text" placeholder="Enter word 1" id="a"> <br>
+                <input type="text" placeholder="Enter word 2" id="b"> <br>
+                <button onclick=check() id="hello" type="submit"> SUBMIT </button> 
+                <button id="ret" onclick=again()>RETRY</button>
+                <p id="result"></p> 
+            </div>
+        </form> 
+    </body> 
+</html>
+
