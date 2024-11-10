@@ -25,4 +25,16 @@ document.querySelectorAll(".portfolio-item").forEach((item) => {
       // For example, show a modal with project details
     });
   });
+
+
+// Disable F12 (Developer Tools) and right-click context menu
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12' || e.key === 'I' && e.ctrlKey) {
+        e.preventDefault();  // Prevent F12 and Ctrl+Shift+I (inspect)
+    }
+});
   
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();  // This prevents the right-click context menu
+    alert("Right-click is disabled on this page.");
+});
