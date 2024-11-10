@@ -1,91 +1,332 @@
-body{
-    background-image:url("https://i.pinimg.com/originals/66/d2/c5/66d2c5dc3d0b0cb5f3b7a4bacc41b7ee.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-h1{
-    text-align: center;
-    font-size: xx-large;
-    padding-left: 10px;
-    color: black; 
-}
-
-input{
-    width: 100%;
-    padding: 10px; 
-    margin: 10px;
-    border: none;
-    border-radius: 4px;
-    font-weight: 40px;
-    color: black;
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
-
-}
-
-#hello{
-
-   background-color:rgb(153, 226, 216);
-   color: black;
-   padding: 10px 20px;
-   border-radius: 4px;
-   cursor: pointer;
-   border: pink;
-   font-weight: bold;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   font-size: 18px;
 
 
-}
-
-#ret{
-    background-color:rgb(153, 226, 216);
-    color: black;
+/* Navbar Styling */
+.custom-navbar {
+    background: linear-gradient(45deg, #3498db, #8e44ad);
+    border-bottom: 3px solid #fff;
+    padding: 15px 0;
+  }
+  
+  .custom-navbar .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-navbar .navbar-brand:hover {
+    color: #f39c12;
+  }
+  
+  .custom-navbar .navbar-toggler-icon {
+    background-color: #fff;
+  }
+  
+  .custom-navbar .navbar-nav .nav-link {
+    color: #fff !important;
+    font-size: 1.1rem;
     padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    border: pink;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .custom-navbar .navbar-nav .nav-link:hover {
+    color: #f39c12 !important;
+    transform: scale(1.1);
+  }
+  
+  .custom-navbar .navbar-nav .nav-item.active .nav-link {
+    color: #f39c12 !important;
+  }
+  
+  .custom-navbar .custom-btn {
+    background-color: #f39c12;
+    color: #fff;
+    font-size: 1.1rem;
     font-weight: bold;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 18px;
-    align-items: center;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .custom-navbar .custom-btn:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 992px) {
+    .custom-navbar .navbar-nav {
+      text-align: center;
+    }
+  }
+  
 
-}
 
-#hello:hover{
-    background-color: gold;
-    transition: 0.25s;
-}
 
-#ret:hover{
-    background-color: gold;
-    transition: 0.25s;
-}
 
-.container{
-
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+  .navbar {
+    transition: background-color 0.5s ease;
+  }
+  .navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  /* Section Styles */
+  #about, #skills, #portfolio, #contact {
+    padding: 60px 0;
+  }
+  #about {
+    background: linear-gradient(to right, #f9f9f9, #e0e0e0);
+  }
+  #about p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .skill-card {
+    transition: transform 0.3s;
+  }
+  .skill-card:hover {
+    transform: scale(1.05);
+    background: #f1f1f1;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  .portfolio-item {
+    position: relative;
+    overflow: hidden;
+  }
+  .portfolio-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  .portfolio-item:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer */
+  footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
     text-align: center;
-    background-color: rgba(255, 255, 255, .5);
+  }
+  footer a {
+    color: #ddd;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  footer a:hover {
+    color: #fff;
+  }
+
+
+
+  
+  /* Back to Top Button */
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /*Port folio */
+
+
+
+  /* Portfolio Styles */
+.portfolio-item {
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.portfolio-image {
+    transition: transform 0.3s ease;
+    border-radius: 10px 10px 0 0;
+}
+
+.portfolio-item:hover .portfolio-image {
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
+.portfolio-item .card-body {
+    transition: background 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item .btn-outline-primary {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-item .btn-outline-primary:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+
+
+/* About Me Section */
+/* About Section Styling */
+#about {
+    padding: 60px 0;
+}
+
+.profile-image-container {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    max-width: 300px;
-    padding: 90px 200px ;
-    margin-left: 280px;  
-    border-radius: 10px; 
-    margin-top: 40px;
-    border: 2px solid  rgba(255, 255, 255, .2);
-    box-shadow: 5px 5px 5px 5px whitesmoke;
-    border-color: white;
-    background-repeat: no-repeat;   
-    
+    margin-bottom: 20px;
 }
 
-#result{
-    font-size: 30px;
-    margin-top: 10px;
-    color: black;
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Cards Styling */
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    margin-top: 15px;
     font-weight: bold;
-
 }
 
+.card-text {
+    font-size: 14px;
+    color: #555;
+}
+
+.card i {
+    font-size: 40px;
+    color: #3498db; /* Color for icons */
+}
+
+
+/* Contact Section Styling */
+#contact {
+    background-color: #f8f9fa;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  #contact h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  #contact .form-control {
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1rem;
+  }
+  
+  #contact .btn-primary {
+    background-color: #3498db;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  #contact .btn-primary:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Additional styling for form controls */
+  #contact .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+    border-color: #3498db;
+  }
+  
+  #contact .mb-3 {
+    margin-bottom: 1.5rem;
+  }
+  
+/* Footer Styling */
+footer {
+    background: linear-gradient(45deg, #3498db, #8e44ad); /* Same gradient as the header and navbar */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #f39c12;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 300;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    footer a {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+  
